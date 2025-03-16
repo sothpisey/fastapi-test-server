@@ -1,0 +1,71 @@
+:root {
+    --dark-bg: #262626;
+    --light-text: #E0E0E0;
+    --heading-color: #00ffff;
+    --paragraph-color: #B0B0B0;
+    --button-bg: #76c7c0;
+    --button-bg-hover: #64a7a2;
+    --link-color: #00ff00;
+    --link-glow: #00ff15;
+    --font-family: 'Poppins', sans-serif;
+    --link-tage-transition-duration: 0.3s;
+    --image-border-color: #ff6600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--heading-color);
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 20px;
+    color: var(--paragraph-color);
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+}
+
+main {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Profile frame */
+div img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--image-border-color);
+    box-shadow: var(--image-border-color) 0 0 20px;
+    margin: 20px auto;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: text-shadow var(--link-tage-transition-duration) ease;
+}
+
+a:hover {
+    text-shadow: 0 0 10px var(--link-glow), 0 0 20px var(--link-glow), 0 0 30px var(--link-glow);
+}
