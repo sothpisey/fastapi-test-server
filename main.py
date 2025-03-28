@@ -15,3 +15,7 @@ templates = Jinja2Templates(directory='templates')
 @app.get('/', response_class=HTMLResponse)
 def home(request: Request):
     return templates.TemplateResponse('index.html', {'request': request})
+
+@app.exception_handler(404)
+def not_found(request: Request, exc):
+    return templates.TemplateResponse("404_not_found.html", {"request": request}, status_code=404)
